@@ -1,0 +1,114 @@
+
+// Bootstrap Variables
+$icon-font-path: '../../node_modules/bootstrap-sass/assets/fonts/bootstrap/';
+
+// Import Bootstrap
+@import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+h1,h2,h3,h4,h5,h6{
+  margin: 0;
+}
+img {
+  max-width: 100%;
+}
+body{
+  background-color: rgb(238, 238, 238);
+}
+.title-bar, .new-image-form-holder{
+  @include make-xs-column(12);
+}
+
+.title-bar{
+  height: 48px;
+  background: linear-gradient( rgb(80, 114, 154), rgb(53, 103, 156) );
+  button{
+    height: 48px;
+    font-size: 28px;
+    background: transparent;
+    border: none;
+    color: rgb(5, 35, 57);
+  }
+}
+.new-image-form-holder{
+  background-color: white;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.image-form{
+  input, textarea{
+    width: 100%;
+    margin-bottom: 12px;
+    padding: 10px;
+  }
+  button{
+    height: 48px;
+    float: right;
+    color: white;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 12px 16px;
+    margin-left: 6px;
+  }
+}
+.button-with-icon-text{
+  height: 48px;
+  vertical-align: super;
+  margin-left: 6px;
+}
+.image-btn-pic{
+  font-size: 20px;
+}
+
+#image-list-holder{
+  background-color: rgb(224, 225, 226);
+  padding-top: 4px;
+}
+.image-detail-holder{
+  @include make-xs-column(8);
+  @include make-xs-column-offset(2);
+  margin-bottom: 30px;
+  padding: 0;
+  box-shadow: 0 1px 1px 1px rgba(0, 0, 0, .1);
+}
+.image-detail-image-holder{
+ margin: 0;
+ padding: 0;
+ background-color: white;
+ text-align: center;
+}
+.image-detail-image-button-holder{
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  img{
+    display: block;
+    margin: 0 auto;
+  }
+}
+.image-detail-edit, .image-detail-delete{
+  position: absolute;
+  top: 5%;
+}
+.image-detail-edit{
+  right: 50px;
+}
+.image-detail-delete{
+  right: 15px;
+}
+.image-detail-caption-holder{
+  background-color: white;
+  padding: 30px;
+}
+.image-detail-caption{
+  font-weight: 300;
+  color: rgb(102, 102, 102);
+}
