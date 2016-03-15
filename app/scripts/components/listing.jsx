@@ -6,11 +6,30 @@ require('backbone-react-component');
 
 var ImageDetail = React.createClass({
   mixins: [Backbone.React.Component.mixin],
+  getInitialState: function(){
+    return {
+      editOn: false
+    };
+  },
+  setEdit: function(e){
+    console.log(this.state.editOn);
+    this.setState({ editOn: true });
+    console.log(this.state.editOn);
+  },
+  delete: function(e){
+    this.props.model.destroy();
+  },
   render: function(){
     return (
       <div className="image-detail-holder">
         <div className="image-detail-image-holder">
           <img src={this.props.model.get('url_src')} />
+          <button className="image-detail-edit" onClick={this.setEdit}>
+            <span className="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+          </button>
+          <button className="image-detail-delete" onClick={this.delete}>
+            <span className="glyphicon glyphicon-remove" aria-hidden="true"></span>
+          </button>
         </div>
         <div className="image-detail-caption-holder">
           <h4 className="image-detail-caption">{this.props.model.get('caption')}</h4>

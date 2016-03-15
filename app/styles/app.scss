@@ -76,7 +76,25 @@ body{
   padding: 0;
   box-shadow: 0 1px 1px 1px rgba(0, 0, 0, .1);
 }
+.image-detail-image-holder{
+  position: relative;
+  text-align: center;
+  img{
+    display: block;
+    margin: 0 auto;
+  }
+}
 
+.image-detail-edit, .image-detail-delete{
+  position: absolute;
+  top: 5%;
+}
+.image-detail-edit{
+  right: 10%;
+}
+.image-detail-delete{
+  right: 5%;
+}
 .image-detail-caption-holder{
   background-color: white;
   padding: 30px;

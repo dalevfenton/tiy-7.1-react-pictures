@@ -21,9 +21,8 @@ var ImageForm = React.createClass({
     if (!url_src || !caption) {
       return;
     }
-    this.props.collection.create({url_src: url_src, caption: caption});
-    console.log(this.props.collection);
-    // this.setState({url_src: '', caption: ''});
+    this.props.collection.create({url_src: url_src, caption: caption}, {wait: true});
+    this.setState({url_src: '', caption: '', formToggle: false});
   },
   toggleForm: function(){
     this.setState({

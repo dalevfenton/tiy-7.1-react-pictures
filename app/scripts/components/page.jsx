@@ -6,9 +6,6 @@ require('backbone-react-component');
 
 var ImageForm = require('./form.jsx');
 var ImageList = require('./listing.jsx');
-// var ImageListing = require('./components/listing.jsx');
-
-// var formEl = React.createElement( ImageForm );
 
 var Page = React.createClass({
   render: function(){

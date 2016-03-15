@@ -14,8 +14,8 @@ var ImageCollection = Backbone.Collection.extend({
   url: 'http://tiny-lasagna-server.herokuapp.com/collections/daleReactImages',
   comparator: -'created',
   initialize: function(){
-    this.listenTo(this, 'change', this.sort);
-  },
+    this.listenTo(this, 'add', this.sort);
+  }
 });
 
 module.exports = {
