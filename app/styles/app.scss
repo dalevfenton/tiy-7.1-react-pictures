@@ -35,11 +35,12 @@ body{
     color: rgb(5, 35, 57);
   }
 }
-
 .new-image-form-holder{
   background-color: white;
   padding-top: 50px;
   padding-bottom: 50px;
+}
+.image-form{
   input, textarea{
     width: 100%;
     margin-bottom: 12px;
@@ -77,6 +78,15 @@ body{
   box-shadow: 0 1px 1px 1px rgba(0, 0, 0, .1);
 }
 .image-detail-image-holder{
+ margin: 0;
+ padding: 0;
+ background-color: white;
+ text-align: center;
+}
+.image-detail-image-button-holder{
+  margin: 0;
+  padding: 0;
+  display: inline-block;
   position: relative;
   text-align: center;
   img{
@@ -84,16 +94,15 @@ body{
     margin: 0 auto;
   }
 }
-
 .image-detail-edit, .image-detail-delete{
   position: absolute;
   top: 5%;
 }
 .image-detail-edit{
-  right: 10%;
+  right: 50px;
 }
 .image-detail-delete{
-  right: 5%;
+  right: 15px;
 }
 .image-detail-caption-holder{
   background-color: white;

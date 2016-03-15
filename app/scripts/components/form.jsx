@@ -29,11 +29,6 @@ var ImageForm = React.createClass({
       formToggle: !this.state.formToggle
     });
   },
-  submit: function(e){
-    e.preventDefault();
-
-    console.log(e);
-  },
   render: function(){
     var formClass;
     if(this.state.formToggle){
@@ -52,7 +47,7 @@ var ImageForm = React.createClass({
         </div>
         <div className={formClass}>
           <div className="container">
-            <form id="new-image-form" onSubmit={this.handleSubmit}>
+            <form id="new-image-form" className="image-form" onSubmit={this.handleSubmit}>
               <input
                 type="url"
                 className="form-control"
@@ -78,7 +73,9 @@ var ImageForm = React.createClass({
                 <span className="image-btn-pic glyphicon glyphicon-picture" aria-hidden="true"></span>
                 <span className="button-with-icon-text">Add Image</span>
               </button>
-              <button className="cancel-form btn">Cancel</button>
+              <button
+                className="cancel-form btn"
+                onClick={this.toggleForm}>Cancel</button>
             </form>
           </div>
         </div>
