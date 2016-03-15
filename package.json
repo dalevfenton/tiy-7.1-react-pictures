@@ -32,6 +32,7 @@
   },
   "scripts": {
     "html": "cp app/*.html dist/",
+    "fonts": "cp app/fonts/* dist/fonts/",
 
     "scss": "sass --style compressed --update app/styles:dist/css",
     "autoprefixer": "postcss -u autoprefixer -r dist/css/*.css",
@@ -55,7 +56,7 @@
     "watch:html": "npm run html && onchange 'app/**/*.html' -- npm run html",
     "watch:images": "npm run build:images && onchange 'app/images/*' -- npm run build:images",
     "server": "live-server --open='dist' --browser='Google Chrome.app' --port='9001' ",
-    "watch": "parallelshell 'npm run watch:html' 'npm run watch:scss' 'npm run watch:images' 'npm run watch:js' 'npm run server'"
+    "watch": "parallelshell 'npm run watch:html' 'npm run fonts' 'npm run watch:scss' 'npm run watch:images' 'npm run watch:js' 'npm run server'"
   },
   "browserify": {
     "transform": [
