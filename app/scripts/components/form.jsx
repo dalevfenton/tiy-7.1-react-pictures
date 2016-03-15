@@ -13,9 +13,6 @@ var ImageForm = React.createClass({
   handleURLInput: function(e) {
     this.setState({url_src: e.target.value});
     var url_src = this.state.url_src;
-    console.log(!url_src);
-    console.log(url_src.indexOf('http') !== 1);
-    console.log(url_src.length > 5);
     if((!url_src )|| (url_src.indexOf('http') !== 0 && url_src.length > 5) ){
       this.setState({urlError: true});
       return;
@@ -37,6 +34,9 @@ var ImageForm = React.createClass({
     e.preventDefault();
     var url_src = this.state.url_src;
     var caption = this.state.caption;
+    if(!url_src || !caption){
+      return;
+    }
     this.props.collection.create({url_src: url_src, caption: caption}, {wait: true});
     this.setState({url_src: '', caption: '', formToggle: false});
   },
