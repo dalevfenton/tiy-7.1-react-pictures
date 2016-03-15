@@ -12,11 +12,14 @@ var ImageList = require('./listing.jsx');
 
 var Page = React.createClass({
   render: function(){
-
     return (
-      <div className="container">
-        <ImageForm />
-        <ImageList collection={this.props.collection} />
+      <div>
+        <div className="container-fluid">
+            <ImageForm collection={this.props.collection} />
+        </div>
+        <div className="container">
+          <ImageList collection={this.props.collection} />
+        </div>
       </div>
     );
   }

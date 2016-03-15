@@ -13,7 +13,7 @@ var ImageDetail = React.createClass({
           <img src={this.props.model.get('url_src')} />
         </div>
         <div className="image-detail-caption-holder">
-          <h4>{this.props.model.get('caption')}</h4>
+          <h4 className="image-detail-caption">{this.props.model.get('caption')}</h4>
         </div>
       </div>
     )
@@ -25,12 +25,12 @@ var ImageListing = React.createClass({
   render: function(){
     var imageList = this.props.collection.map(function(model){
       return (
-        <ImageDetail model={model} key={model.get('url_src')} />
+        <ImageDetail model={model} key={model.get('_id')} />
       );
     });
 
     return (
-      <div id="image-list-holder">
+      <div id="image-list-holder" className="row">
           {imageList}
       </div>
     )
