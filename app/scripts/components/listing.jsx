@@ -1,8 +1,8 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
-
 var Backbone = require('backbone');
 require('backbone-react-component');
+
 
 var ImageEdit = React.createClass({
   getInitialState: function() {
@@ -42,22 +42,19 @@ var ImageEdit = React.createClass({
             name="url_src"
             placeholder="Image URL"
             value={this.state.url_src}
-            onChange={this.handleURLInput}
-          />
+            onChange={this.handleURLInput} />
           <textarea
             type="text"
             className="form-control"
             name="caption"
             placeholder="Image Caption"
             value={this.state.caption}
-            onChange={this.handleCaptionInput}
-          ></textarea>
+            onChange={this.handleCaptionInput} ></textarea>
           <button
             className="submit btn btn-success"
             type="submit"
             name="submit"
-            value="Post"
-          >
+            value="Post" >
             <span className="image-btn-pic glyphicon glyphicon-picture" aria-hidden="true"></span>
             <span className="button-with-icon-text">Edit Image Data</span>
           </button>

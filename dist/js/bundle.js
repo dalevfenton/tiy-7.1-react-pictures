@@ -122,9 +122,9 @@ module.exports = ImageForm;
 "use strict";
 var React = require('react');
 var ReactDOM = require('react-dom');
-
 var Backbone = require('backbone');
 require('backbone-react-component');
+
 
 var ImageEdit = React.createClass({displayName: "ImageEdit",
   getInitialState: function() {
@@ -164,22 +164,19 @@ var ImageEdit = React.createClass({displayName: "ImageEdit",
             name: "url_src", 
             placeholder: "Image URL", 
             value: this.state.url_src, 
-            onChange: this.handleURLInput}
-          ), 
+            onChange: this.handleURLInput}), 
           React.createElement("textarea", {
             type: "text", 
             className: "form-control", 
             name: "caption", 
             placeholder: "Image Caption", 
             value: this.state.caption, 
-            onChange: this.handleCaptionInput
-          }), 
+            onChange: this.handleCaptionInput}), 
           React.createElement("button", {
             className: "submit btn btn-success", 
             type: "submit", 
             name: "submit", 
-            value: "Post"
-          }, 
+            value: "Post"}, 
             React.createElement("span", {className: "image-btn-pic glyphicon glyphicon-picture", "aria-hidden": "true"}), 
             React.createElement("span", {className: "button-with-icon-text"}, "Edit Image Data")
           ), 
